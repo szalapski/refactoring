@@ -17,6 +17,7 @@ Patrick Szalapski makes software and helps others make software at the same Fort
 - refactoring without unit tests
 - refactoring with unit tests
 - demysitify jargon
+- keyboard shortcuts
 
 ## Refactorings
 - renaming
@@ -38,3 +39,6 @@ Patrick Szalapski makes software and helps others make software at the same Fort
   - bastardize constructor
   - configure DI
   - remove bastard constructor
+
+## Details
+Thursday Feb 6 @ TBD (ILM or GMI), doors open at 5, opening/welcome for a few minutes 5:30, presentation starts shortly after that, end by 6:30. People stick around and chat and filter out for last 30 minutes. Usually have 10-30 attendees depending on topic and weather; nearly all are developer themselves and majority are reoccurring attendees.
