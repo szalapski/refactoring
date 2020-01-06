@@ -32,4 +32,3 @@
   - bastardize constructor
   - configure DI
   - remove bastard constructor
- 
