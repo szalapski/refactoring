@@ -18,7 +18,7 @@ Patrick Szalapski makes software and helps others make software at the same Fort
 - refactoring with unit tests
 - demysitify jargon
 
-##Refactorings
+## Refactorings
 - renaming
 - introduce local variable
 - eliminate nesting
