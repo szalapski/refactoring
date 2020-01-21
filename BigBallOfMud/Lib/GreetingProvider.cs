@@ -10,3 +10,4 @@ namespace BigBallOfMud.Lib
 
 
 // TODO: create test project
+// TODO: fix git HTTP error
