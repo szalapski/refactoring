@@ -6,6 +6,7 @@
     - Easier to enhance
     - Easier to find further opportunities for further or broader refactoring
 
+AsyncAwaitPain
 - AccountController.cs 
     - R# warnings
         - Remove unused usings
@@ -18,7 +19,8 @@
         - Restrict members/references to get-only, readonly, private, internal, or const whereever possible
         - Simplify conditionals with logic and underused operators: ?.  ??  ?:     
         - Eliminate redundant special cases
-    - if-else
+    - if-else in GetExternalLogins
+
 
 Things to mention
 - Refactoring is not about less typing

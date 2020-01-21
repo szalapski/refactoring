@@ -8,8 +8,8 @@ Patrick Szalapski makes software and helps others make software at the same Fort
 
 ## Brainstorm
 - SOLID principles
-- Refactoring as suggested by Resharper
-- Turn off resharper
+-x Refactoring as suggested by Resharper
+-x Turn off resharper
 - Goals of refactoring (and non-goals of refactoring)
 - refactoring within a method, within a class, rearchitecturing
 - books
@@ -18,6 +18,10 @@ Patrick Szalapski makes software and helps others make software at the same Fort
 - refactoring with unit tests
 - demysitify jargon
 - keyboard shortcuts
+
+- Show books Feathers and Martin
+- Editing someone else's code?
+- Opinion and taste
 
 ## Refactorings
 - renaming
