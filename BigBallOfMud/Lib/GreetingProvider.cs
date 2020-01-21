@@ -7,3 +7,6 @@ namespace BigBallOfMud.Lib
         public string GetGreeting() => $"Hello TCDNUG, this is version {File.ReadAllText("version.txt")}";
     }
 }
+
+
+// TODO: create test project
