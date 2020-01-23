@@ -1,5 +1,4 @@
-﻿using System.IO;
-using System.Linq;
+﻿using System.Linq;
 
 namespace BigBallOfMud.Lib
 {
@@ -19,25 +18,14 @@ namespace BigBallOfMud.Lib
           N. clean up code (always)
        */
         private IVersionProvider _versionProvider;
-        public GreetingProvider(IVersionProvider versionProvider)
-        {
+        public GreetingProvider(IVersionProvider versionProvider) => 
             _versionProvider = versionProvider ?? throw new System.ArgumentNullException(nameof(versionProvider));
-        }
 
         public string GetGreeting()
         {
             string version = _versionProvider.GetVersion();
             string parity = int.Parse(version.Split('.').Last()) % 2 == 0 ? "even" : "odd";
             return $"Hello TCDNUG, this is version {version}.  What an {parity} version!";
-        }
-
-    }
-
-    public class VersionProvider : IVersionProvider
-    {
-        public string GetVersion()
-        {
-            return File.ReadAllText("version.txt");
         }
 
     }

@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-
-namespace BigBallOfMud.Lib
+﻿namespace BigBallOfMud.Lib
 {
     public interface IGreetingProvider
     {

@@ -7,10 +7,7 @@ namespace BigBallOfMud
     {
         private readonly IGreetingProvider _provider;
 
-        public HomeController(IGreetingProvider provider)
-        {
-            _provider = provider;
-        }
+        public HomeController(IGreetingProvider provider) => _provider = provider;
 
         [Route("/")]
         [HttpGet]
