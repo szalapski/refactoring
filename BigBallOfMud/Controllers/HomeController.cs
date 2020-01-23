@@ -1,8 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using BigBallOfMud.Lib;
 
 namespace BigBallOfMud
@@ -18,6 +14,6 @@ namespace BigBallOfMud
 
         [Route("/")]
         [HttpGet]
-        public string Index() => _provider.GetGreeting();
+        public string Index() => _provider.GetGreeting(false);
     }
 }
