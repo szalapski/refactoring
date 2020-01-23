@@ -13,12 +13,20 @@ namespace BigBallOfMud.Lib
             c. use the new class and method with "new"
           2. make local for the "new" object only
           3. move local to instance
-          5. bastardize constructor
+          4. bastardize constructor
           6. configure DI
           7. remove bastard constructor
           N. clean up code (always)
        */
-        private VersionProvider _versionProvider = new VersionProvider();
+        private VersionProvider _versionProvider;
+        public GreetingProvider(VersionProvider versionProvider)
+        {
+            _versionProvider = versionProvider ?? throw new System.ArgumentNullException(nameof(versionProvider));
+        }
+        public GreetingProvider()
+        {
+            _versionProvider = new VersionProvider();
+        }
 
         public string GetGreeting()
         {
