@@ -11,22 +11,25 @@ namespace BigBallOfMud.Lib
             a. extract instance method
             b. extract instance class from that method
             c. use the new class and method with "new"
-          2. extract interface for that new class
+          2. make local for the "new" object only
+          3. move local to instance
           5. bastardize constructor
           6. configure DI
           7. remove bastard constructor
+          N. clean up code (always)
        */
+        private VersionProvider _versionProvider = new VersionProvider();
 
         public string GetGreeting()
         {
-            string version = new VersionProvider().GetVersion();
+            string version = _versionProvider.GetVersion();
             string parity = int.Parse(version.Split('.').Last()) % 2 == 0 ? "even" : "odd";
             return $"Hello TCDNUG, this is version {version}.  What an {parity} version!";
         }
 
     }
 
-    public class VersionProvider
+    public class VersionProvider : IVersionProvider
     {
         public string GetVersion()
         {
