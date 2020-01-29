@@ -35,6 +35,11 @@
     - GetExternalLogins - string 
     - Extract a method in GetExternalLogins
 
+  - six-step DI refactoring
+
+  - Kill loops with Linq - GetManageInfo;  GetExternalLogins
+    
+
 # Making a class testable
 
 
