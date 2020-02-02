@@ -24,7 +24,7 @@
     - R suggestions
         - Use expression-bodied methods/properties
             - try to build; be willing to upgrade to latest 
-        - Restrict members/references to get-only, readonly, private, internal, or const whereever possible
+        - Restrict members/references to get-only, readonly, private, internal, static, or const whereever possible
         - Simplify conditionals with logic and underused operators: ?.  ??  ?:     
         - Eliminate redundant special cases
     - turn off R#
