@@ -30,7 +30,7 @@
     - GetExternalLogins - string 
     - Extract a method in GetExternalLogins
 
-  - seven-step DI refactoring in BigBallOfMud
+  - seven-step DI refactoring in BigBallOfMud.HomeController
   1. (static only) Sequester the untestable/uninjectable code into a tightly-coupled implementation
 	a. extract instance method
 	b. extract instance class from that method
