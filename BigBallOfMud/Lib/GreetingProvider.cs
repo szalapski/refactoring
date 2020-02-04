@@ -6,15 +6,17 @@ namespace BigBallOfMud.Lib
     public class GreetingProvider : IGreetingProvider
     {
         /* Refactor static/ dependency into proper DI in 7 steps:
-          
-          1. Sequester the untestable/uninjectable code into a tightly-coupled implementation
-            a. extract method
-            b. extract class from that method
-          2. extract interface for that new class
-          5. bastardize constructor
-          6. configure DI
+          1. (static only) Sequester the untestable/uninjectable code into a tightly-coupled implementation
+	        a. extract instance method
+	        b. extract instance class from that method
+	        c. use the new class and method with "new"
+          2. make local refereance for the "new" object only
+          3. move local to instance and switch to abstract type (i.e. interface)
+          4. bastardize constructor
+          5. configure DI
           7. remove bastard constructor
-       */
+          N. clean up code (always)        
+        */
 
         public string GetGreeting()
         {
