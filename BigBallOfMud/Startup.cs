@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BigBallOfMud.Lib;
@@ -17,6 +16,7 @@ namespace BigBallOfMud
             services.AddControllers();
 
             services.AddTransient<IGreetingProvider, GreetingProvider>();
+            services.AddTransient<IVersionProvider, VersionProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
