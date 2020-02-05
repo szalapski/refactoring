@@ -2,6 +2,8 @@
 	- load deck
 	- get books ready
 	- load AsyncAwaitPain in run-x branch
+        - build to ensure it works
+        - zoom window to 100 chars wide
 	- load BigBallOfMud 
     - zoom to start magnifier
 	
@@ -14,21 +16,40 @@
         - Remove unused usings
         - Remove redundant names   
             - Write code in a way that is simpler for those who know the language, not for those who don't.
-    - Commit refactorings often
+    - Commit refactorings often; build often
     - R# suggestions
         - Use expression-bodied methods/properties
             - try to build; be willing to upgrade to latest 
         - Restrict members/references to get-only, readonly, private, internal, static, or const whereever possible
+            - build
         - Simplify conditionals with logic and underused operators: ?.  ??  ?:     
+            - build        
         - Eliminate redundant special cases
+            - build
+        - Use Null propagation
+            - build
+        - Use nameof operator
+            - build
+    - turn off R# code analysis
     - turn off R#
+        ReSharper > Options > Code Inspection > Settings,
 	- if-else in GetExternalLogins
+       - Move declaration
+       - build
     - Invert If in GetErrorResult
+       - Remove braces
+       - build
     - Make simple blocks one line in GetErrorResult
+        - build
     - combine boolean logic in FromIdentity
-    - RegisterExternal - convert return to conditional expression using ternary (implicitly convertible)
+        - build
+    - convert return to conditional expression using ternary (implicitly convertible) in RegisterExternal
+        - build
     - GetExternalLogins - string 
+        - build
     - Extract a method in GetExternalLogins
+         - build
+         - commit and push
 
   - seven-step DI refactoring in BigBallOfMud.HomeController
   1. (static only) Sequester the untestable/uninjectable code into a tightly-coupled implementation
