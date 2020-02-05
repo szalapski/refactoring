@@ -14,6 +14,6 @@ namespace BigBallOfMud
 
         [Route("/")]
         [HttpGet]
-        public string Index() => _provider.GetGreeting(false);
+        public string Index() => _provider.GetGreeting();
     }
 }
