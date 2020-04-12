@@ -3,6 +3,14 @@ using System.Linq;
 
 namespace BigBallOfMud.Lib
 {
+    public class VersionProvider : IVersionProvider
+    {
+        public string GetVersion()
+        {
+            return File.ReadAllText("version.txt");
+        }
+    }
+
     public class GreetingProvider : IGreetingProvider
     {
         /* Refactor static/ dependency into proper DI in 7 steps:
@@ -20,12 +28,23 @@ namespace BigBallOfMud.Lib
 
             N. clean up code (always)        
         */
+        private readonly IVersionProvider versionProvider;
+
+        public GreetingProvider(IVersionProvider versionProvider)
+        {
+            this.versionProvider = versionProvider;
+        }
 
         public string GetGreeting()
         {
-            string version = File.ReadAllText("version.txt");
+            string version = versionProvider.GetVersion();
             string parity = int.Parse(version.Split('.').Last()) % 2 == 0 ? "even" : "odd";
             return $"Hello TCDNUG, this is version {version}.  What an {parity} version!";
         }
+    }
+
+    public interface IVersionProvider
+    {
+        string GetVersion();
     }
 }
